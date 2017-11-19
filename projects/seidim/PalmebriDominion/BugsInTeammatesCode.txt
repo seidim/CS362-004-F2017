@@ -1,0 +1,27 @@
+Muneef Seidi
+CS 362- Fall 2017
+
+
+Testing code written by: Brian Palmer
+
+Bug #1:
+
+Found in Smithy card
+
+While running the unit tests written for assignments 3 and 4, I was able to detect a bug in the smithy function of my teammates’ code.   
+The bug that was detected was that the hand count doesn’t increment properly.  
+This bug occurs every time the code is ran whether using the unit cardtest1 or the randomtestcard1 code.   
+By looking at the smithy function in the dominion.c file from my teammates’ code, I was able to trace the root cause of the bug.  
+The for loop in the function to draw card was changed from “ i < 3 to i < 6.”  This resulted in 3 extra cards being drawn.  
+This bug can easily be fixed by changed the for loop back to “ i < 3” and that should fix the recurring bug.
+
+Bug #2:
+
+Found in village card
+
+Another bug that was detected in Brian’s dominion code using my unit tests from previous assignments was found in the village card function.   
+The bug found in the village function was the incorrect amount of actions being added.  This bug was traced back to village function.  
+The bug was traced back to the number of actions being changed from 2 actions added to 5 actions.  
+This bug was recurring every time the tests were run.  This bug can easily be fixed by changing the number of actions in the village function 
+from 5 actions added to 2 actions added.   “state->numActions = state->numActions + 5;” should be changed to “state->numActions = state->numActions + 2;”  
+This should correct the bug and yield valid test results.
